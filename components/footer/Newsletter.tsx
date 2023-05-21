@@ -1,6 +1,9 @@
 function Newsletter() {
   return (
-    <div class="flex flex-col w-full xl:flex-row items-center gap-6 xl:gap-20 h-full py-5" style={{background: "#ede734"}}>
+    <div
+      class="flex flex-col w-full xl:flex-row items-center gap-6 xl:gap-20 h-full py-5"
+      style={{ background: "#ede734" }}
+    >
       <div class="flex flex-col gap-2 max-w-[300px] sm:max-w-[500px] xl:max-w-[100%] ">
         <span class="font-bold text-2xl text-black text-center xl:pl-10">
           ENTRE PARA O ADICLUB E GANHE 500 PONTOS RESGATÁVEIS
