@@ -1,27 +1,17 @@
 function Newsletter() {
   return (
-    <div class="flex flex-col sm:flex-row items-center gap-6 sm:gap-20">
-      <div class="flex flex-col gap-2 max-w-[400px]">
-        <span class="font-medium text-2xl text-primary-content">
-          Cadastre-se
-        </span>
-        <span class="text-sm text-primary-content">
-          Fique por dentro das novidades e ganhe 15% de desconto na primeira
-          compra. Para mais informações clique aqui.
+    <div class="flex flex-col w-full xl:flex-row items-center gap-6 xl:gap-20 h-full py-5" style={{background: "#ede734"}}>
+      <div class="flex flex-col gap-2 max-w-[300px] sm:max-w-[500px] xl:max-w-[100%] ">
+        <span class="font-bold text-2xl text-black text-center xl:pl-10">
+          ENTRE PARA O ADICLUB E GANHE 500 PONTOS RESGATÁVEIS
         </span>
       </div>
-      <form class="flex flex-row items-center gap-2 font-body text-body w-full sm:w-[408px]">
-        <input
-          class="py-2 px-3 flex-grow bg-primary rounded text-primary-content border border-solid border-base-100"
-          placeholder="Seu e-mail"
-        />
-        <button
-          class="py-2 px-3 bg-base-100 text-base-content rounded"
-          type="button" // prevent form's default behavior
-        >
-          Cadastrar
+      <div class="flex gap-6 w-max relative bg-black text-white  z-10  justify-between items-center px-7 h-12 mt-1 after:content-[''] after:z-[-1] after:block after:w-full after:h-12 after:border-2 after:border-black after:absolute after:top-1 after:left-1">
+        <button>
+          CADASTRE-SE GRATUITAMENTE
         </button>
-      </form>
+        <span class="text-white text-3xl pb-1">→</span>
+      </div>
     </div>
   );
 }
