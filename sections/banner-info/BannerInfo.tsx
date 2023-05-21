@@ -1,5 +1,6 @@
 import { Picture, Source } from "deco-sites/std/components/Picture.tsx";
 import type { Image as LiveImage } from "deco-sites/std/components/types.ts";
+import Image from "deco-sites/std/components/Image.tsx"
 
 export interface Banner {
   srcMobile: LiveImage;
@@ -70,7 +71,7 @@ export default function BannnerInfo({
             src={banner.srcDesktop ? banner.srcDesktop : banner.srcMobile}
             width={1920}
             />
-            <img class="w-full" sizes="(max-width: 640px) 100vw, 30vw" src={banner.srcMobile} alt={banner.alt} />
+            <Image  width={250} height={250} src={banner.srcMobile} alt={banner.alt} loading="eager" decoding="sync" fetchPriority="high" preload/>
         </Picture>
         <div class={`absolute w-[90%] flex flex-col bottom-8 ${POSITION_INFO[positionText.desktop ?? "bottom"]} px-4 md:w-[45%] lg:pl-20`}>
             <h2 class={`text-3xl ${COLORTEXT[colorText ?? "Black"]} font-semibold uppercase`}>{title}</h2>
