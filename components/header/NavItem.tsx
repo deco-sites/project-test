@@ -12,7 +12,6 @@ export interface INavItem {
 function NavItem({ item }: { item: INavItem }) {
   const { href, label, children, image } = item;
 
-
   return (
     <li class="group flex items-center">
       <a href={href} class="px-4 py-3">
