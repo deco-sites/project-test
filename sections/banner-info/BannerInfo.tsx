@@ -23,6 +23,10 @@ export interface Props {
   labelButton?: string;
   colorButon: "Black" | "White";
   href?: string;
+  positionText: {
+    /** @default*/
+    desktop?: "bottom" | "bottom-mid" | "mid";
+  };
   banner: Banner;
 }
 
@@ -38,6 +42,11 @@ const COLOR_BUTTON = {
     "Black": "bg-black after:border-black",
     "White": "bg-white after:border-white",
 }
+const POSITION_INFO ={
+  "bottom": "md:bottom-[15%] xl:bottom-[40%]",
+  "bottom-mid": "md:bottom-[30%]",
+  "mid": "md:bottom-[40%]"
+}
 export default function BannnerInfo({
   title,
   description,
@@ -45,6 +54,7 @@ export default function BannnerInfo({
   labelButton,
   href,
   colorButon,
+  positionText,
   banner,
 }: Props) {
   return (
@@ -62,7 +72,7 @@ export default function BannnerInfo({
             />
             <img class="w-full" sizes="(max-width: 640px) 100vw, 30vw" src={banner.srcMobile} alt={banner.alt} decoding="async" loading="lazy"/>
         </Picture>
-        <div class="absolute w-[90%] flex flex-col bottom-8 px-4 md:bottom-[40%] md:w-[50%] lg:pl-20">
+        <div class={`absolute w-[90%] flex flex-col bottom-8 ${POSITION_INFO[positionText.desktop ?? "bottom"]} px-4 md:w-[45%] lg:pl-20`}>
             <h2 class={`text-3xl ${COLORTEXT[colorText ?? "Black"]} font-semibold uppercase`}>{title}</h2>
             <p class={`text-lg ${COLORTEXT[colorText ?? "Black"]}`}>{description}</p>
             <a href={`${href}`} class={`relative z-10 flex justify-between items-center pl-2 ${COLOR_BUTTON_TEXT[colorButon ?? "Black"]} w-52 h-12 mt-1 after:content-[''] after:z-[-1] after:block after:w-full after:h-12 ${COLOR_BUTTON[colorButon ?? "Black"]} after:border-2 after:absolute after:top-1 after:left-1`}>
