@@ -96,9 +96,10 @@ function ProductCard({ product, preload, itemListName }: Props) {
       </figure>
       {/* Prices & Name */}
       <div class="card-body gap-0">
-        <h2 class="text-sm font-bold whitespace-nowrap overflow-hidden">{name}</h2>
+        <h2 class="text-sm font-bold whitespace-nowrap overflow-hidden">
+          {name}
+        </h2>
         <p class="text-sm font-normal text-gray-500 overflow-hidden">{name}</p>
-        
       </div>
     </div>
   );
