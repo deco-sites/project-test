@@ -1651,8 +1651,8 @@
           }
         },
         {
-          "title": "VTEX product details page - Intelligent Search (deprecated)",
-          "description": "Works on routes of type /:slug/p",
+          "title": "VTEX Intelligent Search - Product Details page",
+          "description": "For routes of type /:slug/p",
           "deprecated": true,
           "type": "object",
           "required": [
@@ -1691,8 +1691,8 @@
           }
         },
         {
-          "title": "VTEX product details page - Portal",
-          "description": "Works on routes of type /:slug/p",
+          "title": "VTEX Legacy - Product Details page",
+          "description": "For routes of type /:slug/p",
           "type": "object",
           "allOf": [
             {
@@ -1781,7 +1781,7 @@
           "type": "null"
         },
         {
-          "title": "Product list loader",
+          "title": "Shopify - Search Products",
           "description": "Usefull for shelves and static galleries.",
           "type": "object",
           "allOf": [
@@ -1803,8 +1803,8 @@
           }
         },
         {
-          "title": "Product list loader",
-          "description": "Usefull for shelves and static galleries.",
+          "title": "VNDA - Search Products",
+          "description": "Use it in Shelves and static Galleries.",
           "type": "object",
           "allOf": [
             {
@@ -1825,7 +1825,7 @@
           }
         },
         {
-          "title": "VTEX product list - legacy (deprecated)",
+          "title": "VTEX - Search Products - legacy (deprecated)",
           "description": "Usefull for shelves and static galleries.",
           "deprecated": true,
           "type": "object",
@@ -1848,7 +1848,7 @@
           }
         },
         {
-          "title": "VTEX related products - legacy (deprecated)",
+          "title": "VTEX Legacy - Related Products (deprecated)",
           "description": "Works on routes of type /:slug/p",
           "deprecated": true,
           "type": "object",
@@ -1871,8 +1871,8 @@
           }
         },
         {
-          "title": "VTEX product list - Intelligent Search (deprecated)",
-          "description": "Usefull for shelves and static galleries.",
+          "title": "VTEX Intelligent Search - Search Products",
+          "description": "Use it in Shelves and static Galleries.",
           "deprecated": true,
           "type": "object",
           "allOf": [
@@ -1916,8 +1916,8 @@
           }
         },
         {
-          "title": "VTEX product list - Portal",
-          "description": "Usefull for shelves and static galleries.",
+          "title": "VTEX Legacy - Search Products",
+          "description": "Use it in Shelves and static Galleries.",
           "type": "object",
           "allOf": [
             {
@@ -2259,7 +2259,7 @@
           "type": "null"
         },
         {
-          "title": "Product listing page loader",
+          "title": "Shopify - Product Listing page",
           "description": "Returns data ready for search pages like category,brand pages",
           "type": "object",
           "allOf": [
@@ -2281,8 +2281,8 @@
           }
         },
         {
-          "title": "Product listing page loader",
-          "description": "Returns data ready for search pages like category,brand pages",
+          "title": "VNDA - Product Listing page",
+          "description": "Useful for category, search, brand and collection pages.",
           "type": "object",
           "allOf": [
             {
@@ -2303,8 +2303,8 @@
           }
         },
         {
-          "title": "VTEX product listing page - legacy (deprecated)",
-          "description": "Returns data ready for search pages like category,brand pages",
+          "title": "VTEX Legacy - Product Listing page",
+          "description": "Useful for category, search, brand and collection pages.",
           "deprecated": true,
           "type": "object",
           "allOf": [
@@ -2326,8 +2326,8 @@
           }
         },
         {
-          "title": "VTEX product listing page - Intelligent Search (deprecated)",
-          "description": "Returns data ready for search pages like category,brand pages",
+          "title": "VTEX Intelligent Search - Product Listing page",
+          "description": "Useful for category, search, brand and collection pages.",
           "deprecated": true,
           "type": "object",
           "allOf": [
@@ -2349,8 +2349,8 @@
           }
         },
         {
-          "title": "Product list loader",
-          "description": "Usefull for shelves and static galleries.",
+          "title": "VTEX - Load Wishlist",
+          "description": "Used with vtex.wish-list app",
           "deprecated": true,
           "type": "object",
           "allOf": [
@@ -2372,7 +2372,7 @@
           }
         },
         {
-          "title": "VTEX product listing page - Intelligent Search",
+          "title": "VTEX Intelligent Search - Product Listing page",
           "description": "Returns data ready for search pages like category,brand pages",
           "type": "object",
           "allOf": [
@@ -2430,7 +2430,7 @@
         },
         "count": {
           "type": "number",
-          "title": "Count",
+          "title": "Items per page",
           "description": "number of products per page to display"
         }
       },
@@ -2521,7 +2521,7 @@
         },
         "count": {
           "type": "number",
-          "title": "Count",
+          "title": "Items per page",
           "description": "number of products per page to display"
         }
       },
@@ -2574,7 +2574,7 @@
         },
         "count": {
           "type": "number",
-          "title": "Count",
+          "title": "Items per page",
           "description": "number of products per page to display"
         },
         "ft": {
@@ -2644,7 +2644,7 @@
             }
           ],
           "type": "string",
-          "title": "Sort"
+          "title": "Sorting"
         },
         "filters": {
           "anyOf": [
@@ -2658,7 +2658,7 @@
             }
           ],
           "type": "string",
-          "title": "Filters",
+          "title": "Filter behavior",
           "description": "Set to static to not change the facets when the user filters the search. Dynamic will only show the filters containing products after each filter action"
         },
         "pageOffset": {
@@ -2666,9 +2666,8 @@
             "number",
             "null"
           ],
-          "title": "Page Offset",
-          "description": "Set the starting page offset. Default to 1.",
-          "default": "1"
+          "title": "Starting page query parameter offset.",
+          "description": "Set the starting page offset. Default to 1."
         }
       },
       "required": [
@@ -2711,7 +2710,7 @@
             }
           ],
           "type": "string",
-          "title": "Cross Selling",
+          "title": "Related Products",
           "description": "VTEX Cross Selling API. This loader only works on routes of type /:slug/p"
         },
         "count": {
@@ -2921,7 +2920,7 @@
           "items": {
             "type": "string"
           },
-          "title": "Collection",
+          "title": "Collection ID",
           "pattern": "\\d*"
         }
       },
@@ -2969,7 +2968,7 @@
         },
         "count": {
           "type": "number",
-          "title": "Count",
+          "title": "Items per page",
           "description": "number of products per page to display"
         },
         "sort": {
@@ -3008,7 +3007,7 @@
             }
           ],
           "type": "string",
-          "title": "Sort"
+          "title": "Sorting"
         },
         "fuzzy": {
           "anyOf": [
@@ -3046,9 +3045,8 @@
             "number",
             "null"
           ],
-          "title": "Page Offset",
-          "description": "Set the starting page offset. Default to 1.",
-          "default": "1"
+          "title": "Starting page query parameter offset.",
+          "description": "Set the starting page offset. Default to 1."
         }
       },
       "required": [
@@ -3175,7 +3173,7 @@
       "properties": {
         "count": {
           "type": "number",
-          "title": "Count",
+          "title": "Items per page",
           "description": "Number of products per page to display",
           "default": "12"
         }
@@ -6034,7 +6032,7 @@
       "properties": {
         "collection": {
           "type": "string",
-          "title": "Collection",
+          "title": "Collection ID (e.g.: 139)",
           "pattern": "\\d*"
         },
         "sort": {
@@ -6418,7 +6416,7 @@
             }
           ],
           "type": "string",
-          "title": "Cross Selling",
+          "title": "Related Products",
           "description": "VTEX Cross Selling API. This loader only works on routes of type /:slug/p"
         },
         "count": {
@@ -6573,7 +6571,7 @@
       "properties": {
         "count": {
           "type": "number",
-          "title": "Count",
+          "title": "Items per page",
           "description": "Number of products per page to display",
           "default": "12"
         }
@@ -7283,7 +7281,7 @@
             "number",
             "null"
           ],
-          "title": "Interval",
+          "title": "Autoplay interval",
           "description": "time (in seconds) to start the carousel autoplay"
         }
       },
@@ -7502,61 +7500,61 @@
         "--rounded-box": {
           "type": "string",
           "default": "1rem",
-          "title": "--rounded-box",
+          "title": "Rounded box",
           "description": "border radius rounded-box utility class, used in card and other large boxes"
         },
         "--rounded-btn": {
           "type": "string",
           "default": "0.5rem",
-          "title": "--rounded-btn",
+          "title": "Rounded button",
           "description": "border radius rounded-btn utility class, used in buttons and similar element"
         },
         "--rounded-badge": {
           "type": "string",
           "default": "1.9rem",
-          "title": "--rounded-badge",
+          "title": "Rounded badge",
           "description": "border radius rounded-badge utility class, used in badges and similar"
         },
         "--animation-btn": {
           "type": "string",
           "default": "0.25s",
-          "title": "--animation-btn",
+          "title": "Animation button",
           "description": "duration of animation when you click on button"
         },
         "--animation-input": {
           "type": "string",
           "default": "0.2s",
-          "title": "--animation-input",
+          "title": "Animation input",
           "description": "duration of animation for inputs like checkbox, toggle, radio, etc"
         },
         "--btn-text-case": {
           "type": "string",
           "default": "uppercase",
-          "title": "--btn-text-case",
+          "title": "Button text case",
           "description": "set default text transform for buttons"
         },
         "--btn-focus-scale": {
           "type": "string",
           "default": "0.95",
-          "title": "--btn-focus-scale",
+          "title": "Button focus scale",
           "description": "scale transform of button when you focus on it"
         },
         "--border-btn": {
           "type": "string",
           "default": "1px",
-          "title": "--border-btn",
+          "title": "Border button",
           "description": "border width of buttons"
         },
         "--tab-border": {
           "type": "string",
           "default": "1px",
-          "title": "--tab-border",
+          "title": "Tab border",
           "description": "border width of tabs"
         },
         "--tab-radius": {
           "type": "string",
           "default": "0.5rem",
-          "title": "--tab-radius",
+          "title": "Tab radius",
           "description": "border radius of tabs"
         }
       },
@@ -8028,7 +8026,7 @@
             "string",
             "null"
           ],
-          "title": "Action",
+          "title": "Page path",
           "description": "When user clicks on the search button, navigate it to",
           "default": "/s"
         },
@@ -8037,7 +8035,7 @@
             "string",
             "null"
           ],
-          "title": "Name",
+          "title": "Term name",
           "description": "Querystring param used when navigating the user",
           "default": "q"
         },
@@ -8058,6 +8056,13 @@
         "label": {
           "type": "string",
           "title": "Label"
+        },
+        "boldText": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "title": "Bold Text"
         },
         "href": {
           "type": "string",
@@ -8137,6 +8142,31 @@
       },
       "title": "NavItem[]"
     },
+    "ZGVjby1zaXRlcy9wcm9qZWN0LXRlc3QvY29tcG9uZW50cy9oZWFkZXIvSGVhZGVyLnRzeA==@NavItemSecondary": {
+      "type": "object",
+      "properties": {
+        "label": {
+          "type": "string",
+          "title": "Label"
+        },
+        "href": {
+          "type": "string",
+          "title": "Href"
+        }
+      },
+      "required": [
+        "label",
+        "href"
+      ],
+      "title": "NavItemSecondary"
+    },
+    "ZGVjby1zaXRlcy9wcm9qZWN0LXRlc3QvY29tcG9uZW50cy9oZWFkZXIvSGVhZGVyLnRzeA==@NavItemSecondary[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9wcm9qZWN0LXRlc3QvY29tcG9uZW50cy9oZWFkZXIvSGVhZGVyLnRzeA==@NavItemSecondary"
+      },
+      "title": "NavItemSecondary[]"
+    },
     "ZGVjby1zaXRlcy9wcm9qZWN0LXRlc3QvY29tcG9uZW50cy9oZWFkZXIvSGVhZGVyLnRzeA==@Props": {
       "type": "object",
       "properties": {
@@ -8149,21 +8179,26 @@
         },
         "searchbar": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9wcm9qZWN0LXRlc3QvY29tcG9uZW50cy9zZWFyY2gvU2VhcmNoYmFyLnRzeA==@EditableProps",
-          "title": "Searchbar"
+          "title": "Search Bar"
         },
         "navItems": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9wcm9qZWN0LXRlc3QvY29tcG9uZW50cy9oZWFkZXIvSGVhZGVyLnRzeA==@NavItem[]",
-          "title": "Nav Items",
+          "title": "Navigation items",
           "description": "Navigation items used both on mobile and desktop menus"
+        },
+        "navItemsSecondary": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcm9qZWN0LXRlc3QvY29tcG9uZW50cy9oZWFkZXIvSGVhZGVyLnRzeA==@NavItemSecondary[]",
+          "title": "Navigation items - secondary",
+          "description": "Secondary navigation items used on desktop menus on the right side."
         },
         "products": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvdHlwZXMudHM=@Product[]|null",
-          "title": "Products",
+          "title": "Product suggestions",
           "description": "Product suggestions displayed on search"
         },
         "suggestions": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvdHlwZXMudHM=@Suggestion|null",
-          "title": "Suggestions"
+          "title": "Enable Top Search terms"
         }
       },
       "required": [
@@ -8356,7 +8391,7 @@
             }
           ],
           "type": "string",
-          "title": "Variant",
+          "title": "Product view",
           "description": "Ask for the developer to remove this option since this is here to help development only and should not be used in production"
         }
       },
@@ -8479,7 +8514,7 @@
       "properties": {
         "label": {
           "type": "string",
-          "title": "Label"
+          "title": "Locale"
         },
         "authToken": {
           "type": "string",
@@ -8555,7 +8590,7 @@
             "string",
             "null"
           ],
-          "title": "Canonical",
+          "title": "Canonical URL",
           "default": "https://example.com"
         },
         "imageUrl": {
@@ -8585,7 +8620,7 @@
         },
         "titleTemplate": {
           "type": "string",
-          "title": "Title Template",
+          "title": "Title template",
           "description": "add a %s whenever you want it to be replaced with the product name",
           "default": "%s | Fashion Store"
         },
@@ -8594,7 +8629,7 @@
             "string",
             "null"
           ],
-          "title": "Description",
+          "title": "Meta tag description",
           "description": "If not set, the product description will be used instead"
         },
         "themeColor": {
@@ -8846,7 +8881,11 @@
         },
         "name": {
           "type": "string",
-          "title": "Name"
+          "title": "The audience name (will be used on cookies).",
+          "description": "Add a meaningful short word for the audience name.",
+          "maxLength": 22,
+          "minLength": 3,
+          "pattern": "^[A-Za-z0-9_]+$"
         },
         "routes": {
           "$ref": "#/definitions/ZGVjby1jeC9saXZlL2ZsYWdzL2F1ZGllbmNlLnRz@Route[]",
@@ -8962,7 +9001,7 @@
       ],
       "title": "WorkflowRef"
     },
-    "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@16c4bfc6ba0390ebdf9d1ecf6dc83774|WorkflowRef": {
+    "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@6fafe0f553db3c0685828404a37be338|WorkflowRef": {
       "anyOf": [
         {
           "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef"
@@ -8980,13 +9019,13 @@
           ]
         }
       ],
-      "title": "16c4bfc6ba0390ebdf9d1ecf6dc83774|WorkflowRef"
+      "title": "6fafe0f553db3c0685828404a37be338|WorkflowRef"
     },
     "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@Props": {
       "type": "object",
       "properties": {
         "workflow": {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@16c4bfc6ba0390ebdf9d1ecf6dc83774|WorkflowRef",
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@6fafe0f553db3c0685828404a37be338|WorkflowRef",
           "title": "Workflow"
         },
         "id": {
@@ -9656,7 +9695,7 @@
       }
     },
     "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3Nob3BpZnlQcm9kdWN0TGlzdC50cw==": {
-      "title": "Product list loader",
+      "title": "Shopify - Search Products",
       "description": "Usefull for shelves and static galleries.",
       "type": "object",
       "allOf": [
@@ -9678,7 +9717,7 @@
       }
     },
     "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3Nob3BpZnlQcm9kdWN0TGlzdGluZ1BhZ2UudHM=": {
-      "title": "Product listing page loader",
+      "title": "Shopify - Product Listing page",
       "description": "Returns data ready for search pages like category,brand pages",
       "type": "object",
       "allOf": [
@@ -9717,8 +9756,8 @@
       }
     },
     "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3ZuZGFQcm9kdWN0TGlzdC50cw==": {
-      "title": "Product list loader",
-      "description": "Usefull for shelves and static galleries.",
+      "title": "VNDA - Search Products",
+      "description": "Use it in Shelves and static Galleries.",
       "type": "object",
       "allOf": [
         {
@@ -9739,8 +9778,8 @@
       }
     },
     "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3ZuZGFQcm9kdWN0TGlzdGluZ1BhZ2UudHM=": {
-      "title": "Product listing page loader",
-      "description": "Returns data ready for search pages like category,brand pages",
+      "title": "VNDA - Product Listing page",
+      "description": "Useful for category, search, brand and collection pages.",
       "type": "object",
       "allOf": [
         {
@@ -9779,7 +9818,7 @@
       }
     },
     "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3Z0ZXhMZWdhY3lQcm9kdWN0TGlzdC50cw==": {
-      "title": "VTEX product list - legacy (deprecated)",
+      "title": "VTEX - Search Products - legacy (deprecated)",
       "description": "Usefull for shelves and static galleries.",
       "deprecated": true,
       "type": "object",
@@ -9802,8 +9841,8 @@
       }
     },
     "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3Z0ZXhMZWdhY3lQcm9kdWN0TGlzdGluZ1BhZ2UudHM=": {
-      "title": "VTEX product listing page - legacy (deprecated)",
-      "description": "Returns data ready for search pages like category,brand pages",
+      "title": "VTEX Legacy - Product Listing page",
+      "description": "Useful for category, search, brand and collection pages.",
       "deprecated": true,
       "type": "object",
       "allOf": [
@@ -9825,7 +9864,7 @@
       }
     },
     "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3Z0ZXhMZWdhY3lSZWxhdGVkUHJvZHVjdHNMb2FkZXIudHM=": {
-      "title": "VTEX related products - legacy (deprecated)",
+      "title": "VTEX Legacy - Related Products (deprecated)",
       "description": "Works on routes of type /:slug/p",
       "deprecated": true,
       "type": "object",
@@ -9870,8 +9909,8 @@
       }
     },
     "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3Z0ZXhQcm9kdWN0RGV0YWlsc1BhZ2UudHM=": {
-      "title": "VTEX product details page - Intelligent Search (deprecated)",
-      "description": "Works on routes of type /:slug/p",
+      "title": "VTEX Intelligent Search - Product Details page",
+      "description": "For routes of type /:slug/p",
       "deprecated": true,
       "type": "object",
       "required": [
@@ -9888,8 +9927,8 @@
       }
     },
     "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3Z0ZXhQcm9kdWN0TGlzdC50cw==": {
-      "title": "VTEX product list - Intelligent Search (deprecated)",
-      "description": "Usefull for shelves and static galleries.",
+      "title": "VTEX Intelligent Search - Search Products",
+      "description": "Use it in Shelves and static Galleries.",
       "deprecated": true,
       "type": "object",
       "allOf": [
@@ -9911,8 +9950,8 @@
       }
     },
     "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3Z0ZXhQcm9kdWN0TGlzdGluZ1BhZ2UudHM=": {
-      "title": "VTEX product listing page - Intelligent Search (deprecated)",
-      "description": "Returns data ready for search pages like category,brand pages",
+      "title": "VTEX Intelligent Search - Product Listing page",
+      "description": "Useful for category, search, brand and collection pages.",
       "deprecated": true,
       "type": "object",
       "allOf": [
@@ -9956,8 +9995,8 @@
       }
     },
     "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3Z0ZXhXaXNobGlzdC50cw==": {
-      "title": "Product list loader",
-      "description": "Usefull for shelves and static galleries.",
+      "title": "VTEX - Load Wishlist",
+      "description": "Used with vtex.wish-list app",
       "deprecated": true,
       "type": "object",
       "allOf": [
@@ -10189,7 +10228,7 @@
       }
     },
     "ZGVjby1zaXRlcy9zdGQvbG9hZGVycy92dGV4L2ludGVsbGlnZW50U2VhcmNoL3Byb2R1Y3RMaXN0aW5nUGFnZS50cw==": {
-      "title": "VTEX product listing page - Intelligent Search",
+      "title": "VTEX Intelligent Search - Product Listing page",
       "description": "Returns data ready for search pages like category,brand pages",
       "type": "object",
       "allOf": [
@@ -10232,8 +10271,8 @@
       }
     },
     "ZGVjby1zaXRlcy9zdGQvbG9hZGVycy92dGV4L2xlZ2FjeS9wcm9kdWN0RGV0YWlsc1BhZ2UudHM=": {
-      "title": "VTEX product details page - Portal",
-      "description": "Works on routes of type /:slug/p",
+      "title": "VTEX Legacy - Product Details page",
+      "description": "For routes of type /:slug/p",
       "type": "object",
       "allOf": [
         {
@@ -10254,8 +10293,8 @@
       }
     },
     "ZGVjby1zaXRlcy9zdGQvbG9hZGVycy92dGV4L2xlZ2FjeS9wcm9kdWN0TGlzdC50cw==": {
-      "title": "VTEX product list - Portal",
-      "description": "Usefull for shelves and static galleries.",
+      "title": "VTEX Legacy - Search Products",
+      "description": "Use it in Shelves and static Galleries.",
       "type": "object",
       "allOf": [
         {
@@ -11951,21 +11990,6 @@
       ],
       "title": "deco-cx/live/routes/_middleware.ts@MiddlewareConfig",
       "description": "Global configurations for ./routes/_middleware.ts route"
-    },
-    "ZGVjby1jeC9saXZlL3JvdXRlcy9bLi4uY2F0Y2hhbGxdLnRzeA==@Entrypoint": {
-      "type": "object",
-      "properties": {
-        "handler": {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9oYW5kbGVyLnRz@Handler",
-          "description": "configure how to handle requests.",
-          "title": "Handler"
-        }
-      },
-      "required": [
-        "handler"
-      ],
-      "title": "deco-cx/live/routes/[...catchall].tsx@Entrypoint",
-      "description": "Site entrypoint, configure your audiences and routes."
     }
   },
   "root": {
@@ -12441,14 +12465,14 @@
         "./routes/[...catchall].tsx": {
           "anyOf": [
             {
-              "$ref": "#/definitions/ZGVjby1jeC9saXZlL3JvdXRlcy9bLi4uY2F0Y2hhbGxdLnRzeA==@Entrypoint"
+              "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9oYW5kbGVyLnRz@Handler"
             }
           ]
         },
         "./routes/index.tsx": {
           "anyOf": [
             {
-              "$ref": "#/definitions/ZGVjby1jeC9saXZlL3JvdXRlcy9bLi4uY2F0Y2hhbGxdLnRzeA==@Entrypoint"
+              "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9oYW5kbGVyLnRz@Handler"
             }
           ]
         }

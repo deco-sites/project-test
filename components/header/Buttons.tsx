@@ -18,13 +18,13 @@ function SearchButton() {
 
   return (
     <Button
-      class="btn-square btn-ghost"
+      class="w-[25px] btn-square btn-ghost"
       aria-label="search icon button"
       onClick={() => {
         displaySearchbar.value = !displaySearchbar.peek();
       }}
     >
-      <Icon id="MagnifyingGlass" width={20} height={20} strokeWidth={0.1} />
+      <Icon id="MagnifyingGlass" width={25} height={25} strokeWidth={0.1} />
     </Button>
   );
 }
@@ -34,13 +34,13 @@ function MenuButton() {
 
   return (
     <Button
-      class="btn-square btn-ghost"
+      class="w-[25px] btn-square btn-ghost"
       aria-label="open menu"
       onClick={() => {
         displayMenu.value = true;
       }}
     >
-      <Icon id="Bars3" width={20} height={20} strokeWidth={0.01} />
+      <Icon id="Bars3" width={25} height={25} strokeWidth={0.01} />
     </Button>
   );
 }
@@ -72,7 +72,7 @@ function CartButton() {
 
   return (
     <Button
-      class="btn-square btn-ghost relative"
+      class="w-[25px] btn-square btn-ghost relative"
       aria-label="open cart"
       data-deco={displayCart.value && "open-cart"}
       loading={loading.value}
@@ -84,7 +84,7 @@ function CartButton() {
             {totalItems > 9 ? "9+" : totalItems}
           </span>
         )}
-        <Icon id="ShoppingCart" width={20} height={20} strokeWidth={2} />
+        <Icon id="ShoppingCart" width={25} height={25} strokeWidth={2} />
       </div>
     </Button>
   );

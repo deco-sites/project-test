@@ -10,6 +10,7 @@ import { headerHeight } from "./constants.ts";
 
 export interface NavItem {
   label: string;
+  boldText?: boolean;
   href: string;
   children?: Array<{
     label: string;
@@ -25,6 +26,12 @@ export interface NavItem {
   };
 }
 
+export interface NavItemSecondary{
+  label: string,
+  href: string
+}
+
+
 export interface Props {
   alerts: string[];
   /** @title Search Bar */
@@ -34,6 +41,12 @@ export interface Props {
    * @description Navigation items used both on mobile and desktop menus
    */
   navItems?: NavItem[];
+
+   /**
+   * @title Navigation items - secondary
+   * @description Secondary navigation items used on desktop menus on the right side.
+   */
+   navItemsSecondary?: NavItemSecondary[];
 
   /**
    * @title Product suggestions
@@ -53,6 +66,7 @@ function Header(
     searchbar: _searchbar,
     products,
     navItems = [],
+    navItemsSecondary = [],
     suggestions,
   }: Props,
 ) {
@@ -62,7 +76,7 @@ function Header(
       <header style={{ height: headerHeight }}>
         <div class="bg-base-100 fixed w-full z-50">
           <Alert alerts={alerts} />
-          <Navbar items={navItems} searchbar={searchbar} />
+          <Navbar items={navItems} searchbar={searchbar} itemsSecondary={navItemsSecondary}/>
         </div>
 
         <Modals
