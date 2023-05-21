@@ -35,20 +35,19 @@ export default function FindYourTeam({
       </div>
       <div class="w-full h-fit px-2 overflow-x-scroll flex items-center gap-5 lg:justify-center lg:overflow-hidden">
         {banner.map((item) => (
-            <a href={item.href} class="w-[50px] h-[50px]">
-              <Image
-                width={50}
-                height={40}
-                src={item.srcImage}
-                alt={item.alt}
-                loading="lazy"
-                decoding="async"
-                fetchPriority="low"
-                class="max-w-none"
-              />
-            </a>
-          )
-        )}
+          <a href={item.href} class="w-[50px] h-[50px]">
+            <Image
+              width={50}
+              height={40}
+              src={item.srcImage}
+              alt={item.alt}
+              loading="lazy"
+              decoding="async"
+              fetchPriority="low"
+              class="max-w-none"
+            />
+          </a>
+        ))}
       </div>
     </section>
   );
