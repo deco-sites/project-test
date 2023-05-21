@@ -7040,6 +7040,11 @@
           "required": [],
           "title": "Position Text"
         },
+        "isLCP": {
+          "type": "boolean",
+          "default": "false",
+          "title": "Is L C P"
+        },
         "banner": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9wcm9qZWN0LXRlc3Qvc2VjdGlvbnMvYmFubmVyLWluZm8vQmFubmVySW5mby50c3g=@Banner",
           "title": "Banner"
@@ -7049,6 +7054,7 @@
         "colorText",
         "colorButon",
         "positionText",
+        "isLCP",
         "banner"
       ],
       "title": "deco-sites/project-test/sections/banner-info/BannerInfo.tsx@Props"

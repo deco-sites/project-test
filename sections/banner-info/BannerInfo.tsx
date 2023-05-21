@@ -28,6 +28,8 @@ export interface Props {
     /** @default*/
     desktop?: "bottom" | "bottom-mid" | "mid";
   };
+  /** @default false*/
+  isLCP: boolean;
   banner: Banner;
 }
 
@@ -56,6 +58,7 @@ export default function BannnerInfo({
   href,
   colorButon,
   positionText,
+  isLCP,
   banner,
 }: Props) {
   return (
@@ -76,10 +79,9 @@ export default function BannnerInfo({
           height={250}
           src={banner.srcMobile}
           alt={banner.alt}
-          loading="eager"
-          decoding="sync"
-          fetchPriority="high"
-          preload
+          loading={`${isLCP ? "eager" : "lazy"}`}
+          decoding={`${isLCP ? "sync" : "async"}`}
+          fetchPriority={`${isLCP ? "high" : "low"}`}
         />
       </Picture>
       <div
