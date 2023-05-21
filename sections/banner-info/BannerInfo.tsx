@@ -63,7 +63,7 @@ export default function BannnerInfo({
 }: Props) {
   return (
     <section class="w-full relative h-[calc(100vw_*_(482/375))] md:h-[calc(100vw_*_(569/1280))]">
-      <Picture>
+      <Picture preload={isLCP}>
         <Source
           media="(max-width: 767px)"
           src={banner.srcMobile}
