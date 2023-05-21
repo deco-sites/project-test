@@ -45,11 +45,6 @@ function Result({
         />
 
         <div class="flex flex-row">
-          {/* {variant === "aside" && filters.length > 0 && (
-            <aside class="hidden sm:block w-min min-w-[250px] fixed bg-red-900 z-50 top-0 right-0">
-              <Filters filters={filters} />
-            </aside>
-          )} */}
           <div class="flex-grow">
             <ProductGallery products={products} />
           </div>
