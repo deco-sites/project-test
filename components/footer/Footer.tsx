@@ -11,7 +11,6 @@ export type StringItem = {
   href: string;
 };
 
-
 export type Section = {
   label: string;
   href: string;
