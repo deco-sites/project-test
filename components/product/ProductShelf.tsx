@@ -28,13 +28,13 @@ function ProductShelf({
   return (
     <div
       id={id}
-      class="container grid grid-cols-[48px_1fr_48px] grid-rows-[48px_1fr_48px_1fr] py-10 px-0 sm:px-5"
+      class=" grid grid-cols-[48px_1fr_48px] grid-rows-[48px_1fr_48px_1fr] py-10 px-0 gap-5"
     >
-      <h2 class="text-center row-start-1 col-span-full">
-        <span class="font-medium text-2xl">{title}</span>
+      <h2 class="container text-start row-start-1 col-span-full mb-5">
+        <span class="text-[40px] font-bold uppercase">{title}</span>
       </h2>
 
-      <Slider class="carousel carousel-center sm:carousel-end gap-6 col-span-full row-start-2 row-end-5">
+      <Slider class="relative carousel carousel-center sm:carousel-end gap-6 col-span-full row-start-2 row-end-5">
         {products?.map((product, index) => (
           <Slider.Item
             index={index}
@@ -46,13 +46,13 @@ function ProductShelf({
       </Slider>
 
       <>
-        <div class="hidden relative sm:block z-10 col-start-1 row-start-3">
-          <Slider.PrevButton class="btn btn-circle btn-outline absolute right-1/2 bg-base-100">
+        <div class="hidden absolute lg:block z-10 col-start-1 row-start-3 left-[90%]">
+          <Slider.PrevButton class="btn rounded-none btn-outline absolute border-none right-1/2 bg-base-100">
             <Icon size={20} id="ChevronLeft" strokeWidth={3} />
           </Slider.PrevButton>
         </div>
-        <div class="hidden relative sm:block z-10 col-start-3 row-start-3">
-          <Slider.NextButton class="btn btn-circle btn-outline absolute left-1/2 bg-base-100">
+        <div class="hidden absolute lg:block z-10 col-start-3 row-start-3 left-[90%]">
+          <Slider.NextButton class="btn rounded-none btn-outline absolute border-none left-1/2 bg-base-100">
             <Icon size={20} id="ChevronRight" strokeWidth={3} />
           </Slider.NextButton>
         </div>
