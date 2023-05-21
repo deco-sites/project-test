@@ -26,8 +26,7 @@ export interface Props {
 }
 
 function BannerUI({ banner }: { banner: Banner }) {
-  const { title, subtitle, image } = banner;
-
+  const { title, subtitle, image} = banner;
   return (
     <div class="grid grid-cols-1 grid-rows-1">
       <Picture preload class="col-start-1 col-span-1 row-start-1 row-span-1">
@@ -46,16 +45,12 @@ function BannerUI({ banner }: { banner: Banner }) {
         <img class="w-full" src={image.desktop} alt={image.alt ?? title} />
       </Picture>
 
-      <div class="container flex flex-col items-center justify-center sm:items-start col-start-1 col-span-1 row-start-1 row-span-1 w-full">
-        <h1>
-          <span class="text-5xl font-medium text-base-100">
+      <div class=" lg:pl-5 container flex flex-col items-center justify-center sm:items-start col-start-1 col-span-1 row-start-1 row-span-1 w-full">
+        <h1 class={`text-5xl font-medium text-base-100 text-center`}>
             {title}
-          </span>
         </h1>
-        <h2>
-          <span class="text-xl font-medium text-base-100">
+        <h2 class="text-xl font-medium text-base-100 text-center">
             {subtitle}
-          </span>
         </h2>
       </div>
     </div>
@@ -75,7 +70,7 @@ function Banner({ page, banners = [] }: Props) {
     .breadcrumb
     .itemListElement
     .reduce((curr, acc) => curr.position > acc.position ? curr : acc);
-
+  
   const matching = banners.find(({ matcher }) =>
     new RegExp(matcher).test(canonical)
   );
@@ -83,7 +78,6 @@ function Banner({ page, banners = [] }: Props) {
   if (!matching) {
     return null;
   }
-
   return <BannerUI banner={matching} />;
 }
 
