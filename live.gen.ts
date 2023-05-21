@@ -28,9 +28,10 @@ import * as $$$$$$$$9 from "./sections/Header.tsx";
 import * as $$$$$$$$10 from "./sections/Highlights.tsx";
 import * as $$$$$$$$11 from "./sections/Informations.tsx";
 import * as $$$$$$$$12 from "./sections/LinkTree.tsx";
-import * as $$$$$$$$13 from "./sections/ProductDetails.tsx";
-import * as $$$$$$$$14 from "./sections/ProductShelf.tsx";
-import * as $$$$$$$$15 from "./sections/SearchResult.tsx";
+import * as $$$$$$$$13 from "./sections/popular-now/PopularNow.tsx";
+import * as $$$$$$$$14 from "./sections/ProductDetails.tsx";
+import * as $$$$$$$$15 from "./sections/ProductShelf.tsx";
+import * as $$$$$$$$16 from "./sections/SearchResult.tsx";
 import * as $$$$$$$$16 from "./sections/tendencias/Tendencias.tsx";
 import * as $$$$$$$$17 from "./sections/WhatsApp.tsx";
 import * as $$$$$$$$18 from "./sections/WishlistGallery.tsx";
@@ -185,6 +186,7 @@ const manifest = {
     "deco-sites/project-test/sections/Highlights.tsx": $$$$$$$$10,
     "deco-sites/project-test/sections/Informations.tsx": $$$$$$$$11,
     "deco-sites/project-test/sections/LinkTree.tsx": $$$$$$$$12,
+    "deco-sites/project-test/sections/popular-now/PopularNow.tsx": $$$$$$$$13,
     "deco-sites/project-test/sections/ProductDetails.tsx": $$$$$$$$13,
     "deco-sites/project-test/sections/ProductShelf.tsx": $$$$$$$$14,
     "deco-sites/project-test/sections/SearchResult.tsx": $$$$$$$$15,
