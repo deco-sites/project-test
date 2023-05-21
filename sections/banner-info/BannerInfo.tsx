@@ -62,7 +62,7 @@ export default function BannnerInfo({
   banner,
 }: Props) {
   return (
-    <section class="w-full relative">
+    <section class="w-full relative h-[calc(100vw*(482/375)) md:h-[calc(100vw*(569/1280))]]">
       <Picture>
         <Source
           media="(max-width: 767px)"
