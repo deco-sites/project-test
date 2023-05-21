@@ -28,7 +28,10 @@ export default function FindYourTeam({
       </div>
       <div class="w-full h-fit px-4 flex flex-col items-start gap-4 lg:flex-row lg:flex-wrap lg:gap-[5%] lg:gap-y-[30px]">
         {popularItems.map((item) => (
-          <a href={item.href} class="w-full h-fit py-2 flex justify-start items-center border-b-[1px] border-black lg:w-[30%]">
+          <a
+            href={item.href}
+            class="w-full h-fit py-2 flex justify-start items-center border-b-[1px] border-black lg:w-[30%]"
+          >
             <span class="text-3xl font-bold text-black">{item.label}</span>
           </a>
         ))}
