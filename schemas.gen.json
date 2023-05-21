@@ -91,6 +91,7 @@
               "deco-sites/project-test/sections/Highlights.tsx",
               "deco-sites/project-test/sections/Informations.tsx",
               "deco-sites/project-test/sections/LinkTree.tsx",
+              "deco-sites/project-test/sections/popular-now/PopularNow.tsx",
               "deco-sites/project-test/sections/ProductDetails.tsx",
               "deco-sites/project-test/sections/ProductShelf.tsx",
               "deco-sites/project-test/sections/SearchResult.tsx",
@@ -8547,6 +8548,50 @@
       "required": [],
       "title": "deco-sites/project-test/components/ui/LinkTree.tsx@Props"
     },
+    "ZGVjby1zaXRlcy9wcm9qZWN0LXRlc3Qvc2VjdGlvbnMvcG9wdWxhci1ub3cvUG9wdWxhck5vdy50c3g=@PopularItems": {
+      "type": "object",
+      "properties": {
+        "label": {
+          "type": "string",
+          "title": "Item Name"
+        },
+        "href": {
+          "type": "string",
+          "title": "Href"
+        }
+      },
+      "required": [
+        "label",
+        "href"
+      ],
+      "title": "PopularItems"
+    },
+    "ZGVjby1zaXRlcy9wcm9qZWN0LXRlc3Qvc2VjdGlvbnMvcG9wdWxhci1ub3cvUG9wdWxhck5vdy50c3g=@PopularItems[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9wcm9qZWN0LXRlc3Qvc2VjdGlvbnMvcG9wdWxhci1ub3cvUG9wdWxhck5vdy50c3g=@PopularItems"
+      },
+      "title": "PopularItems[]"
+    },
+    "ZGVjby1zaXRlcy9wcm9qZWN0LXRlc3Qvc2VjdGlvbnMvcG9wdWxhci1ub3cvUG9wdWxhck5vdy50c3g=@Props": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "default": "POPULAR AGORA",
+          "title": "Title"
+        },
+        "popularItems": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcm9qZWN0LXRlc3Qvc2VjdGlvbnMvcG9wdWxhci1ub3cvUG9wdWxhck5vdy50c3g=@PopularItems[]",
+          "title": "Popular Items"
+        }
+      },
+      "required": [
+        "title",
+        "popularItems"
+      ],
+      "title": "deco-sites/project-test/sections/popular-now/PopularNow.tsx@Props"
+    },
     "ZGVjby1zaXRlcy9wcm9qZWN0LXRlc3QvY29tcG9uZW50cy9wcm9kdWN0L1Byb2R1Y3REZXRhaWxzLnRzeA==@Props": {
       "type": "object",
       "properties": {
@@ -11247,6 +11292,27 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy9wcm9qZWN0LXRlc3Qvc2VjdGlvbnMvcG9wdWxhci1ub3cvUG9wdWxhck5vdy50c3g=": {
+      "title": "deco-sites/project-test/sections/popular-now/PopularNow.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcm9qZWN0LXRlc3Qvc2VjdGlvbnMvcG9wdWxhci1ub3cvUG9wdWxhck5vdy50c3g=@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/project-test/sections/popular-now/PopularNow.tsx"
+          ],
+          "default": "deco-sites/project-test/sections/popular-now/PopularNow.tsx"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy9wcm9qZWN0LXRlc3Qvc2VjdGlvbnMvUHJvZHVjdERldGFpbHMudHN4": {
       "title": "deco-sites/project-test/sections/ProductDetails.tsx",
       "type": "object",
@@ -12508,6 +12574,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9wcm9qZWN0LXRlc3Qvc2VjdGlvbnMvTGlua1RyZWUudHN4"
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcm9qZWN0LXRlc3Qvc2VjdGlvbnMvcG9wdWxhci1ub3cvUG9wdWxhck5vdy50c3g="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9wcm9qZWN0LXRlc3Qvc2VjdGlvbnMvUHJvZHVjdERldGFpbHMudHN4"
