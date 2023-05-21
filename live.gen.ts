@@ -22,15 +22,16 @@ import * as $$$$$$$$3 from "./sections/Carousel.tsx";
 import * as $$$$$$$$4 from "./sections/CookieConsent.tsx";
 import * as $$$$$$$$5 from "./sections/DesignSystem.tsx";
 import * as $$$$$$$$6 from "./sections/Features.tsx";
+import * as $$$$$$$$7 from "./sections/Footer.tsx";
+import * as $$$$$$$$8 from "./sections/Header.tsx";
+import * as $$$$$$$$9 from "./sections/Highlights.tsx";
+import * as $$$$$$$$10 from "./sections/Informations.tsx";
+import * as $$$$$$$$11 from "./sections/LinkTree.tsx";
+import * as $$$$$$$$12 from "./sections/ProductDetails.tsx";
+import * as $$$$$$$$13 from "./sections/ProductShelf.tsx";
+import * as $$$$$$$$14 from "./sections/SearchResult.tsx";
+import * as $$$$$$$$15 from "./sections/tendencias/Tendencias.tsx";
 import * as $$$$$$$$7 from "./sections/find-your-team/FindYourTeam.tsx";
-import * as $$$$$$$$8 from "./sections/Footer.tsx";
-import * as $$$$$$$$9 from "./sections/Header.tsx";
-import * as $$$$$$$$10 from "./sections/Highlights.tsx";
-import * as $$$$$$$$11 from "./sections/Informations.tsx";
-import * as $$$$$$$$12 from "./sections/LinkTree.tsx";
-import * as $$$$$$$$13 from "./sections/ProductDetails.tsx";
-import * as $$$$$$$$14 from "./sections/ProductShelf.tsx";
-import * as $$$$$$$$15 from "./sections/SearchResult.tsx";
 import * as $$$$$$$$16 from "./sections/WhatsApp.tsx";
 import * as $$$$$$$$17 from "./sections/WishlistGallery.tsx";
 import * as $live_middleware from "$live/routes/_middleware.ts";
@@ -177,16 +178,17 @@ const manifest = {
     "deco-sites/project-test/sections/CookieConsent.tsx": $$$$$$$$4,
     "deco-sites/project-test/sections/DesignSystem.tsx": $$$$$$$$5,
     "deco-sites/project-test/sections/Features.tsx": $$$$$$$$6,
+    "deco-sites/project-test/sections/Footer.tsx": $$$$$$$$7,
+    "deco-sites/project-test/sections/Header.tsx": $$$$$$$$8,
+    "deco-sites/project-test/sections/Highlights.tsx": $$$$$$$$9,
+    "deco-sites/project-test/sections/Informations.tsx": $$$$$$$$10,
+    "deco-sites/project-test/sections/LinkTree.tsx": $$$$$$$$11,
+    "deco-sites/project-test/sections/ProductDetails.tsx": $$$$$$$$12,
+    "deco-sites/project-test/sections/ProductShelf.tsx": $$$$$$$$13,
+    "deco-sites/project-test/sections/SearchResult.tsx": $$$$$$$$14,
+    "deco-sites/project-test/sections/tendencias/Tendencias.tsx": $$$$$$$$15,
     "deco-sites/project-test/sections/find-your-team/FindYourTeam.tsx":
       $$$$$$$$7,
-    "deco-sites/project-test/sections/Footer.tsx": $$$$$$$$8,
-    "deco-sites/project-test/sections/Header.tsx": $$$$$$$$9,
-    "deco-sites/project-test/sections/Highlights.tsx": $$$$$$$$10,
-    "deco-sites/project-test/sections/Informations.tsx": $$$$$$$$11,
-    "deco-sites/project-test/sections/LinkTree.tsx": $$$$$$$$12,
-    "deco-sites/project-test/sections/ProductDetails.tsx": $$$$$$$$13,
-    "deco-sites/project-test/sections/ProductShelf.tsx": $$$$$$$$14,
-    "deco-sites/project-test/sections/SearchResult.tsx": $$$$$$$$15,
     "deco-sites/project-test/sections/WhatsApp.tsx": $$$$$$$$16,
     "deco-sites/project-test/sections/WishlistGallery.tsx": $$$$$$$$17,
     "deco-sites/std/sections/Analytics.tsx": i2$$$$3,
