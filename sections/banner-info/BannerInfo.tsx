@@ -63,7 +63,7 @@ export default function BannnerInfo({
 }: Props) {
   return (
     <section class="w-full relative h-[calc(100vw_*_(482/375))] md:h-[calc(100vw_*_(569/1280))]">
-      <Picture preload={isLCP}>
+      <Picture>
         <Source
           media="(max-width: 767px)"
           src={banner.srcMobile}
@@ -82,6 +82,7 @@ export default function BannnerInfo({
           decoding={`${isLCP ? "sync" : "async"}`}
           fetchPriority={`${isLCP ? "high" : "low"}`}
           class="w-full h-[calc(100vw_*_(482/375))] md:h-[calc(100vw_*_(569/1280))]"
+          preload={isLCP}
         />
       </Picture>
       <div
