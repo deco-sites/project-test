@@ -50,7 +50,7 @@ const POSITION_INFO = {
   "bottom-mid": "md:bottom-[30%]",
   "mid": "md:bottom-[40%]",
 };
-export default function BannnerInfo({
+export default function BannerInfo({
   title,
   description,
   colorText,
