@@ -70,7 +70,7 @@ export default function BannnerInfo({
             src={banner.srcDesktop ? banner.srcDesktop : banner.srcMobile}
             width={1920}
             />
-            <img class="w-full" sizes="(max-width: 640px) 100vw, 30vw" src={banner.srcMobile} alt={banner.alt} decoding="async" loading="lazy"/>
+            <img class="w-full" sizes="(max-width: 640px) 100vw, 30vw" src={banner.srcMobile} alt={banner.alt} />
         </Picture>
         <div class={`absolute w-[90%] flex flex-col bottom-8 ${POSITION_INFO[positionText.desktop ?? "bottom"]} px-4 md:w-[45%] lg:pl-20`}>
             <h2 class={`text-3xl ${COLORTEXT[colorText ?? "Black"]} font-semibold uppercase`}>{title}</h2>
