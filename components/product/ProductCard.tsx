@@ -22,8 +22,7 @@ const relative = (url: string) => {
   return `${link.pathname}${link.search}`;
 };
 
-const WIDTH = 200;
-const HEIGHT = 279;
+const WIDTH = 250;
 
 function ProductCard({ product, preload, itemListName }: Props) {
   const {
@@ -60,7 +59,7 @@ function ProductCard({ product, preload, itemListName }: Props) {
       id={`product-card-${productID}`}
       {...sendEventOnClick(clickEvent)}
     >
-      <figure class="relative " style={{ aspectRatio: `${WIDTH} / ${HEIGHT}` }}>
+      <figure class="relative group/card" style={{ aspectRatio: `1 / 1` }}>
         {/* Wishlist button */}
         <div class="absolute top-0 right-0 z-10">
           <WishlistIcon productGroupID={productGroupID} productID={productID} />
@@ -75,9 +74,7 @@ function ProductCard({ product, preload, itemListName }: Props) {
             src={front.url!}
             alt={front.alternateName}
             width={WIDTH}
-            height={HEIGHT}
-            class="absolute transition-opacity rounded w-full opacity-100 group-hover:opacity-0"
-            sizes="(max-width: 640px) 50vw, 20vw"
+            class="absolute transition-opacity rounded w-full aspect-square opacity-100 group-hover:opacity-0"
             preload={preload}
             loading={preload ? "eager" : "lazy"}
             decoding="async"
@@ -86,38 +83,22 @@ function ProductCard({ product, preload, itemListName }: Props) {
             src={back?.url ?? front.url!}
             alt={back?.alternateName ?? front.alternateName}
             width={WIDTH}
-            height={HEIGHT}
-            class="absolute transition-opacity rounded w-full opacity-0 group-hover:opacity-100"
-            sizes="(max-width: 640px) 50vw, 20vw"
+            class="absolute transition-opacity rounded w-full aspect-square opacity-0 group-hover:opacity-100"
             loading="lazy"
             decoding="async"
           />
         </a>
-        <figcaption class="glass card-body card-actions absolute bottom-0 left-0 w-full transition-opacity opacity-0 group-hover:opacity-100">
-          {/* SKU Selector */}
-          <ul class="flex justify-center items-center gap-2 w-full">
-            {variants.map(([value, [link]]) => (
-              <a href={link}>
-                <Avatar
-                  variant={link === url ? "active" : "default"}
-                  content={value}
-                />
-              </a>
-            ))}
-          </ul>
-        </figcaption>
-      </figure>
-      {/* Prices & Name */}
-      <div class="card-body">
-        <h2 class="card-title whitespace-nowrap overflow-hidden">{name}</h2>
-        <div class="flex items-end gap-2">
-          <span class="line-through text-base-300 text-xs">
-            {formatPrice(listPrice, offers!.priceCurrency!)}
-          </span>
-          <span class="text-secondary">
+        <div class="absolute bottom-0 left-4 flex items-end duration-500 gap-2 group-hover/card:bottom-2 group-hover/card:duration-500">
+          <span class="text-sm text-black bg-gray-200 px-1">
             {formatPrice(price, offers!.priceCurrency!)}
           </span>
         </div>
+      </figure>
+      {/* Prices & Name */}
+      <div class="card-body gap-0">
+        <h2 class="text-sm font-bold whitespace-nowrap overflow-hidden">{name}</h2>
+        <p class="text-sm font-normal text-gray-500 overflow-hidden">{name}</p>
+        
       </div>
     </div>
   );
