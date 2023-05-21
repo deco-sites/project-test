@@ -65,9 +65,9 @@ export default function BannnerInfo({
     <section class="w-full relative h-[calc(100vw_*_(482/375))] md:h-[calc(100vw_*_(569/1280))]">
       <Picture>
         <Source
-          media="(max-width: 766px)"
+          media="(max-width: 767px)"
           src={banner.srcMobile}
-          width={500}
+          width={767}
         />
         <Source
           media="(min-width: 768px)"
@@ -86,7 +86,7 @@ export default function BannnerInfo({
         />
       </Picture>
       <div
-        class={`absolute w-[90%] flex flex-col bottom-8 ${
+        class={`absolute w-[95%] flex flex-col bottom-8 ${
           POSITION_INFO[positionText.desktop ?? "bottom"]
         } px-4 md:w-[45%] lg:pl-20`}
       >
