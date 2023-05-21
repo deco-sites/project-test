@@ -65,7 +65,7 @@ export default function BannnerInfo({
     <section class="w-full relative h-[calc(100vw_*_(482/375))] md:h-[calc(100vw_*_(569/1280))]">
       <Picture>
         <Source
-          media="(max-width: 767px)"
+          media="(max-width: 766px)"
           src={banner.srcMobile}
           width={500}
         />
