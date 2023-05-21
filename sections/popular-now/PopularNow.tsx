@@ -22,7 +22,7 @@ export default function FindYourTeam({
   popularItems,
 }: Props) {
   return (
-    <section class="w-full h-fit py-[30px] flex flex-col justify-center items-center gap-2">
+    <section class="w-full h-fit py-[30px] flex flex-col justify-center items-center gap-2 lg:w-[90%] lg:mx-auto">
       <div class="w-full flex justify-start items-center px-4">
         <span class="font-bold text-xl text-black">{title}</span>
       </div>
