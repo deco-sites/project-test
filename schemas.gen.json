@@ -85,6 +85,7 @@
               "deco-sites/project-test/sections/CookieConsent.tsx",
               "deco-sites/project-test/sections/DesignSystem.tsx",
               "deco-sites/project-test/sections/Features.tsx",
+              "deco-sites/project-test/sections/find-your-team/FindYourTeam.tsx",
               "deco-sites/project-test/sections/Footer.tsx",
               "deco-sites/project-test/sections/Header.tsx",
               "deco-sites/project-test/sections/Highlights.tsx",
@@ -7918,6 +7919,56 @@
       ],
       "title": "deco-sites/project-test/components/ui/Features.tsx@Props"
     },
+    "ZGVjby1zaXRlcy9wcm9qZWN0LXRlc3Qvc2VjdGlvbnMvZmluZC15b3VyLXRlYW0vRmluZFlvdXJUZWFtLnRzeA==@Banner": {
+      "type": "object",
+      "properties": {
+        "srcImage": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Image"
+        },
+        "alt": {
+          "type": "string",
+          "description": "Image alt text",
+          "title": "Alt"
+        },
+        "href": {
+          "type": "string",
+          "title": "Href"
+        }
+      },
+      "required": [
+        "srcImage",
+        "alt",
+        "href"
+      ],
+      "title": "Banner"
+    },
+    "ZGVjby1zaXRlcy9wcm9qZWN0LXRlc3Qvc2VjdGlvbnMvZmluZC15b3VyLXRlYW0vRmluZFlvdXJUZWFtLnRzeA==@Banner[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9wcm9qZWN0LXRlc3Qvc2VjdGlvbnMvZmluZC15b3VyLXRlYW0vRmluZFlvdXJUZWFtLnRzeA==@Banner"
+      },
+      "title": "Banner[]"
+    },
+    "ZGVjby1zaXRlcy9wcm9qZWN0LXRlc3Qvc2VjdGlvbnMvZmluZC15b3VyLXRlYW0vRmluZFlvdXJUZWFtLnRzeA==@Props": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "default": "Encontre seu time",
+          "title": "Title"
+        },
+        "banner": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcm9qZWN0LXRlc3Qvc2VjdGlvbnMvZmluZC15b3VyLXRlYW0vRmluZFlvdXJUZWFtLnRzeA==@Banner[]",
+          "title": "Banner"
+        }
+      },
+      "required": [
+        "title",
+        "banner"
+      ],
+      "title": "deco-sites/project-test/sections/find-your-team/FindYourTeam.tsx@Props"
+    },
     "ZGVjby1zaXRlcy9wcm9qZWN0LXRlc3QvY29tcG9uZW50cy9mb290ZXIvRm9vdGVyLnRzeA==@StringItem": {
       "type": "object",
       "properties": {
@@ -11070,6 +11121,27 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy9wcm9qZWN0LXRlc3Qvc2VjdGlvbnMvZmluZC15b3VyLXRlYW0vRmluZFlvdXJUZWFtLnRzeA==": {
+      "title": "deco-sites/project-test/sections/find-your-team/FindYourTeam.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcm9qZWN0LXRlc3Qvc2VjdGlvbnMvZmluZC15b3VyLXRlYW0vRmluZFlvdXJUZWFtLnRzeA==@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/project-test/sections/find-your-team/FindYourTeam.tsx"
+          ],
+          "default": "deco-sites/project-test/sections/find-your-team/FindYourTeam.tsx"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy9wcm9qZWN0LXRlc3Qvc2VjdGlvbnMvRm9vdGVyLnRzeA==": {
       "title": "deco-sites/project-test/sections/Footer.tsx",
       "type": "object",
@@ -12418,6 +12490,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9wcm9qZWN0LXRlc3Qvc2VjdGlvbnMvRmVhdHVyZXMudHN4"
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcm9qZWN0LXRlc3Qvc2VjdGlvbnMvZmluZC15b3VyLXRlYW0vRmluZFlvdXJUZWFtLnRzeA=="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9wcm9qZWN0LXRlc3Qvc2VjdGlvbnMvRm9vdGVyLnRzeA=="
