@@ -22,11 +22,11 @@ export interface DivColumn {
 
 export interface Props {
   title?: string;
-  
+
   /**
    * @description Aplique borda a sua imagem
    */
-    /** @maxItems 4*/
+  /** @maxItems 4*/
   divColumn: DivColumn[];
 }
 
@@ -43,28 +43,34 @@ export default function BannnerGrid({
       </div>
       <div class="flex w-full gap-4 overflow-scroll lg:overflow-visible">
         {divColumn.map(({ bannerIMG, subtitle, descricao, link }) => (
-            <div class="flex flex-col basis-full">            
-                <a
-                href={bannerIMG?.href}
-                class={`overflow-hidden`}
-                >
-                <Image
+          <div class="flex flex-col basis-full">
+            <a
+              href={bannerIMG?.href}
+              class={`overflow-hidden`}
+            >
+              <Image
                 width={300}
                 src={bannerIMG?.srcImage}
                 alt={bannerIMG?.alt}
                 loading="lazy"
                 decoding="async"
                 fetchPriority="low"
-                class="max-w-none w-56 lg:w-[100%] lg:max-w-sm aspect-[3/4]" />
-                </a>
-                <div className="flex flex-col mt-3 min-h-[130px]">
-                    <h3 class="font-bold text-base">{subtitle}</h3>
-                    <p class="text-sm">{descricao}</p>
-                    <a class="h-full flex items-end font-bold underline" href={`${bannerIMG?.href}`}>{link}</a>    
-                </div>    
+                class="max-w-none w-56 lg:w-[100%] lg:max-w-sm aspect-[3/4]"
+              />
+            </a>
+            <div className="flex flex-col mt-3 min-h-[130px]">
+              <h3 class="font-bold text-base">{subtitle}</h3>
+              <p class="text-sm">{descricao}</p>
+              <a
+                class="h-full flex items-end font-bold underline"
+                href={`${bannerIMG?.href}`}
+              >
+                {link}
+              </a>
             </div>
-        ))}   
-        </div>
+          </div>
+        ))}
+      </div>
     </section>
   );
 }
