@@ -81,7 +81,7 @@ function Footer(
 
             {/* Mobile view */}
             <ul class="w-[90%] mx-auto flex flex-row flex-wrap justify-center gap-[10%] lg:hidden pb-5">
-              {sections2Mobile.map((section) => (
+              {sectionsMobile.map((section) => (
                 <li class="w-[45%] h-[40px] mt-4 flex justify-center items-center">
                   <a
                     href={section.href}
