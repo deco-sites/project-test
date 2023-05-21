@@ -4,6 +4,7 @@ import { useUI } from "deco-sites/fashion/sdk/useUI.ts";
 
 import type { Props as MenuProps } from "deco-sites/fashion/components/header/Menu.tsx";
 import type { Props as SearchbarProps } from "deco-sites/fashion/components/search/Searchbar.tsx";
+import type { Props as CartProps } from "deco-sites/project-test/components/minicart/Cart.tsx";
 import Loading from "deco-sites/fashion/components/ui/Loading.tsx";
 
 const Menu = lazy(() =>
@@ -19,9 +20,10 @@ const Searchbar = lazy(() =>
 interface Props {
   menu: MenuProps;
   searchbar?: SearchbarProps;
+  cart: CartProps;
 }
 
-function Modals({ menu, searchbar }: Props) {
+function Modals({ menu, searchbar, cart }: Props) {
   const { displayCart, displayMenu, displaySearchbar } = useUI();
 
   return (
@@ -65,7 +67,7 @@ function Modals({ menu, searchbar }: Props) {
         }}
       >
         <Suspense fallback={<Loading />}>
-          <Cart />
+          <Cart {...cart} />
         </Suspense>
       </Modal>
     </>

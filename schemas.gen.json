@@ -59,6 +59,7 @@
               "deco-sites/std/loaders/vtex/user.ts",
               "deco-sites/std/loaders/vtex/wishlist.ts",
               "./islands/AddToCartButton.tsx",
+              "./islands/Cart.tsx",
               "./islands/HeaderButton.tsx",
               "./islands/HeaderModals.tsx",
               "./islands/HeaderSearchbar.tsx",
@@ -6586,6 +6587,42 @@
       ],
       "title": "deco-sites/std/packs/vtex/loaders/wishlist.ts@Props"
     },
+    "ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image": {
+      "type": "string",
+      "format": "image-uri",
+      "title": "Image"
+    },
+    "ZGVjby1zaXRlcy9wcm9qZWN0LXRlc3QvY29tcG9uZW50cy9taW5pY2FydC9DYXJ0LnRzeA==@Props": {
+      "type": "object",
+      "properties": {
+        "freeShippingObjectiveQuantity": {
+          "type": "number",
+          "title": "Free Shipping Objective Quantity"
+        },
+        "shippingIcon": {
+          "type": "object",
+          "properties": {
+            "src": {
+              "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+              "title": "Src"
+            },
+            "alt": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "Alt"
+            }
+          },
+          "required": [],
+          "title": "Shipping Icon"
+        }
+      },
+      "required": [
+        "freeShippingObjectiveQuantity"
+      ],
+      "title": "deco-sites/project-test/components/minicart/Cart.tsx@Props"
+    },
     "ZGVjby1zaXRlcy9zdGQvcGFja3MvdnRleC90eXBlcy50cw==@SKU": {
       "type": "object",
       "properties": {
@@ -6970,11 +7007,6 @@
         "aboutUsItems"
       ],
       "title": "deco-sites/project-test/sections/about-us/AboutUs.tsx@Props"
-    },
-    "ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image": {
-      "type": "string",
-      "format": "image-uri",
-      "title": "Image"
     },
     "ZGVjby1zaXRlcy9wcm9qZWN0LXRlc3Qvc2VjdGlvbnMvYmFubmVyLWluZm8vQmFubmVySW5mby50c3g=@Banner": {
       "type": "object",
@@ -8298,10 +8330,15 @@
         "suggestions": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvdHlwZXMudHM=@Suggestion|null",
           "title": "Enable Top Search terms"
+        },
+        "cart": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcm9qZWN0LXRlc3QvY29tcG9uZW50cy9taW5pY2FydC9DYXJ0LnRzeA==@Props",
+          "title": "Cart"
         }
       },
       "required": [
-        "alerts"
+        "alerts",
+        "cart"
       ],
       "title": "deco-sites/project-test/components/header/Header.tsx@Props"
     },
@@ -10664,6 +10701,27 @@
         }
       }
     },
+    "Li9pc2xhbmRzL0NhcnQudHN4": {
+      "title": "./islands/Cart.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcm9qZWN0LXRlc3QvY29tcG9uZW50cy9taW5pY2FydC9DYXJ0LnRzeA==@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "./islands/Cart.tsx"
+          ],
+          "default": "./islands/Cart.tsx"
+        }
+      }
+    },
     "Li9pc2xhbmRzL0hlYWRlckJ1dHRvbi50c3g=": {
       "title": "./islands/HeaderButton.tsx",
       "type": "object",
@@ -12504,6 +12562,9 @@
         },
         {
           "$ref": "#/definitions/Li9pc2xhbmRzL0FkZFRvQ2FydEJ1dHRvbi50c3g="
+        },
+        {
+          "$ref": "#/definitions/Li9pc2xhbmRzL0NhcnQudHN4"
         },
         {
           "$ref": "#/definitions/Li9pc2xhbmRzL0hlYWRlckJ1dHRvbi50c3g="
