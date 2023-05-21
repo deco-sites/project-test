@@ -46,11 +46,11 @@ export interface Props {
    * @title Conteúdo Newsletter
    * @default ENTRE PARA O ADICLUB E GANHE 500 PONTOS RESGATÁVEIS
    */
-   label: string
-   /**
-    * @default CADASTRE-SE GRATUITAMENTE
-    */
-   textButton: string
+  label: string;
+  /**
+   * @default CADASTRE-SE GRATUITAMENTE
+   */
+  textButton: string;
 }
 
 function Footer(
@@ -60,7 +60,7 @@ function Footer(
     complementInfo,
     sectionsDesktop = [],
     label,
-    textButton
+    textButton,
   }: Props,
 ) {
   return (
@@ -68,7 +68,7 @@ function Footer(
       <div>
         <div class=" w-full flex flex-col divide-y divide-primary-content">
           <FooterContainer>
-            <Newsletter label={label} textButton={textButton}/>
+            <Newsletter label={label} textButton={textButton} />
           </FooterContainer>
 
           <FooterContainer>
