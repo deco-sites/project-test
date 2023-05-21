@@ -11,39 +11,12 @@ export type StringItem = {
   href: string;
 };
 
-export type Item = StringItem | IconItem;
-
 export type Section = {
   label: string;
-  children: Item[];
+  href: string;
 };
 
-const isIcon = (item: Item): item is IconItem =>
-  // deno-lint-ignore no-explicit-any
-  typeof (item as any)?.icon === "string";
-
-function SectionItem({ item }: { item: Item }) {
-  return (
-    <span class="text-primary-content">
-      {isIcon(item)
-        ? (
-          <div class="border-base-100 border border-solid py-1.5 px-2.5">
-            <Icon
-              id={item.icon}
-              width={25}
-              height={20}
-              strokeWidth={0.01}
-            />
-          </div>
-        )
-        : (
-          <a href={item.href}>
-            {item.label}
-          </a>
-        )}
-    </span>
-  );
-}
+export type Item = StringItem | IconItem;
 
 function FooterContainer(
   { children, class: _class = "" }: {
@@ -51,16 +24,36 @@ function FooterContainer(
     children: ComponentChildren;
   },
 ) {
-  return <div class={`py-6 px-4 sm:py-12 sm:px-0 ${_class}`}>{children}</div>;
+  return (
+    <div class={`py-6 px-4 border-t-transparent sm:py-12 sm:px-0 ${_class}`}>
+      {children}
+    </div>
+  );
 }
 
 export interface Props {
-  sections?: Section[];
+  sectionsMobile?: Section[];
+  sections2Mobile?: Section[];
+  complementInfo?: string;
+  sectionsDesktop?: Array<{
+    label: string;
+    children?: Array<{
+      label: string;
+      href: string;
+    }>;
+  }>;
 }
 
-function Footer({ sections = [] }: Props) {
+function Footer(
+  {
+    sectionsMobile = [],
+    sections2Mobile = [],
+    complementInfo,
+    sectionsDesktop = [],
+  }: Props,
+) {
   return (
-    <footer class="w-full bg-primary flex flex-col divide-y divide-primary-content">
+    <footer class="w-full bg-black flex flex-col divide-y divide-primary-content lg:bg-white">
       <div>
         <div class="container w-full flex flex-col divide-y divide-primary-content">
           <FooterContainer>
@@ -69,19 +62,33 @@ function Footer({ sections = [] }: Props) {
 
           <FooterContainer>
             {/* Desktop view */}
-            <ul class="hidden sm:flex flex-row gap-20">
-              {sections?.map((section) => (
+            <ul class="hidden lg:flex flex-row gap-20 bg-white w-[80%] mx-auto">
+              {sectionsDesktop.map((section) => (
                 <li>
-                  
+                  <span class="font-semibold text-lg text-black">
+                    {section.label}
+                  </span>
+                  <ul class="">
+                    {section?.children?.map((child) => (
+                      <li>
+                        <a href={child.href} class="text-xs">{child.label}</a>
+                      </li>
+                    ))}
+                  </ul>
                 </li>
               ))}
             </ul>
 
             {/* Mobile view */}
-            <ul class="flex flex-col sm:hidden sm:flex-row gap-4">
-              {sections.map((section) => (
-                <li>
-                  
+            <ul class="w-[90%] mx-auto flex flex-row flex-wrap justify-center gap-[10%] lg:hidden ">
+              {sections2Mobile.map((section) => (
+                <li class="w-[45%] h-[40px] mt-4 flex justify-center items-center">
+                  <a
+                    href={section.href}
+                    class="w-full text-white text-center text-xs"
+                  >
+                    {section.label}
+                  </a>
                 </li>
               ))}
             </ul>
@@ -89,53 +96,31 @@ function Footer({ sections = [] }: Props) {
         </div>
       </div>
 
-      <div>
-        <div class="container w-full">
-          <FooterContainer class="flex justify-between w-full">
-            <span class="flex items-center gap-1 text-primary-content">
-              Powered by{" "}
-              <a
-                href="https://www.deco.cx"
-                aria-label="powered by https://www.deco.cx"
-              >
-                <Icon id="Deco" height={20} width={60} strokeWidth={0.01} />
-              </a>
-            </span>
-
-            <ul class="flex items-center justify-center gap-2">
-              <li>
-                <a
-                  href="https://www.instagram.com/deco.cx"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Instagram logo"
-                >
-                  <Icon
-                    class="text-primary-content"
-                    width={32}
-                    height={32}
-                    id="Instagram"
-                    strokeWidth={1}
-                  />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="http://www.deco.cx/discord"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Discord logo"
-                >
-                  <Icon
-                    class="text-primary-content"
-                    width={32}
-                    height={32}
-                    id="Discord"
-                    strokeWidth={5}
-                  />
-                </a>
-              </li>
+      <div class="w-full">
+        <div
+          class="container w-full max-w-none"
+          style={{ background: "#282c31" }}
+        >
+          <FooterContainer class="flex flex-col items-center justify-between gap-6 w-full lg:py-1">
+            <ul class="w-[90%] mx-auto flex flex-row flex-wrap justify-center items-center gap-[10%] lg:flex-nowrap lg:gap-4">
+              {sections2Mobile.map((section) => (
+                <li class="w-[45%] h-[40px] mt-4 flex justify-center items-center lg:w-full lg:20px">
+                  <a
+                    href={section.href}
+                    class="w-full text-center text-xs"
+                    style={{ color: "#d3d7da" }}
+                  >
+                    {section.label}
+                  </a>
+                </li>
+              ))}
             </ul>
+            <span
+              class="w-[90%] h-fit text-white text-center text-xs py-5"
+              style={{ color: "#d3d7da" }}
+            >
+              {complementInfo}
+            </span>
           </FooterContainer>
         </div>
       </div>
