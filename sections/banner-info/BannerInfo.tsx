@@ -76,7 +76,6 @@ export default function BannnerInfo({
         />
         <Image
           width={250}
-          height={250}
           src={banner.srcMobile}
           alt={banner.alt}
           loading={`${isLCP ? "eager" : "lazy"}`}
