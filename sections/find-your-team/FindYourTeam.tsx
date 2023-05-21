@@ -27,10 +27,10 @@ export default function FindYourTeam({
 }: Props) {
   return (
     <section
-      class="w-full h-fit py-[30px] flex flex-col justify-center items-center gap-2"
+      class="w-full h-fit py-[30px] flex flex-col justify-center items-center gap-2 mt-7"
       style={{ background: "#ebedee" }}
     >
-      <div class="w-full flex justify-start items-center px-4 lg:justify-center">
+      <div class="w-full flex items-center px-4 justify-center mb-5">
         <span>{title}</span>
       </div>
       <div class="w-full h-fit px-2 overflow-x-scroll flex items-center gap-5 lg:justify-center lg:overflow-hidden">
@@ -38,7 +38,7 @@ export default function FindYourTeam({
           <a href={item.href} class="w-[50px] h-[50px]">
             <Image
               width={50}
-              height={40}
+              height={45}
               src={item.srcImage}
               alt={item.alt}
               loading="lazy"
