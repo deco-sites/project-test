@@ -82,7 +82,6 @@ export default function BannnerInfo({
           decoding={`${isLCP ? "sync" : "async"}`}
           fetchPriority={`${isLCP ? "high" : "low"}`}
           class="w-full h-[calc(100vw_*_(482/375))] md:h-[calc(100vw_*_(569/1280))]"
-          preload={isLCP}
         />
       </Picture>
       <div
