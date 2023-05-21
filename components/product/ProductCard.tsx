@@ -22,8 +22,7 @@ const relative = (url: string) => {
   return `${link.pathname}${link.search}`;
 };
 
-const WIDTH = 200;
-const HEIGHT = 279;
+const WIDTH = 250;
 
 function ProductCard({ product, preload, itemListName }: Props) {
   const {
@@ -75,9 +74,7 @@ function ProductCard({ product, preload, itemListName }: Props) {
             src={front.url!}
             alt={front.alternateName}
             width={WIDTH}
-            height={HEIGHT}
             class="absolute transition-opacity rounded w-full aspect-square opacity-100 group-hover:opacity-0"
-            sizes="(max-width: 640px) 50vw, 20vw"
             preload={preload}
             loading={preload ? "eager" : "lazy"}
             decoding="async"
@@ -86,9 +83,7 @@ function ProductCard({ product, preload, itemListName }: Props) {
             src={back?.url ?? front.url!}
             alt={back?.alternateName ?? front.alternateName}
             width={WIDTH}
-            height={HEIGHT}
             class="absolute transition-opacity rounded w-full aspect-square opacity-0 group-hover:opacity-100"
-            sizes="(max-width: 640px) 50vw, 20vw"
             loading="lazy"
             decoding="async"
           />
