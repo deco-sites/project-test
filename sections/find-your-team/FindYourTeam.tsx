@@ -38,7 +38,7 @@ export default function FindYourTeam({
           <a href={item.href} class="w-[50px] h-[50px]">
             <Image
               width={50}
-              height={45}
+              height={46}
               src={item.srcImage}
               alt={item.alt}
               loading="lazy"
