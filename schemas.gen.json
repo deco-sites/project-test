@@ -78,6 +78,7 @@
               "$live/sections/PageInclude.tsx",
               "$live/sections/Slot.tsx",
               "$live/sections/UseSlot.tsx",
+              "deco-sites/project-test/sections/about-us/AboutUs.tsx",
               "deco-sites/project-test/sections/banner-info/BannerInfo.tsx",
               "deco-sites/project-test/sections/BannerGrid.tsx",
               "deco-sites/project-test/sections/BannerPLP.tsx",
@@ -6931,6 +6932,45 @@
       ],
       "title": "deco-cx/live/sections/UseSlot.tsx@Props"
     },
+    "ZGVjby1zaXRlcy9wcm9qZWN0LXRlc3Qvc2VjdGlvbnMvYWJvdXQtdXMvQWJvdXRVcy50c3g=@AboutUsItems": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "title": "Title"
+        },
+        "text": {
+          "type": "string",
+          "title": "Text"
+        }
+      },
+      "required": [
+        "title",
+        "text"
+      ],
+      "title": "AboutUsItems"
+    },
+    "ZGVjby1zaXRlcy9wcm9qZWN0LXRlc3Qvc2VjdGlvbnMvYWJvdXQtdXMvQWJvdXRVcy50c3g=@AboutUsItems[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9wcm9qZWN0LXRlc3Qvc2VjdGlvbnMvYWJvdXQtdXMvQWJvdXRVcy50c3g=@AboutUsItems"
+      },
+      "title": "AboutUsItems[]"
+    },
+    "ZGVjby1zaXRlcy9wcm9qZWN0LXRlc3Qvc2VjdGlvbnMvYWJvdXQtdXMvQWJvdXRVcy50c3g=@Props": {
+      "type": "object",
+      "properties": {
+        "aboutUsItems": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcm9qZWN0LXRlc3Qvc2VjdGlvbnMvYWJvdXQtdXMvQWJvdXRVcy50c3g=@AboutUsItems[]",
+          "maxItems": 2,
+          "title": "About Us Items"
+        }
+      },
+      "required": [
+        "aboutUsItems"
+      ],
+      "title": "deco-sites/project-test/sections/about-us/AboutUs.tsx@Props"
+    },
     "ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image": {
       "type": "string",
       "format": "image-uri",
@@ -11114,6 +11154,27 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy9wcm9qZWN0LXRlc3Qvc2VjdGlvbnMvYWJvdXQtdXMvQWJvdXRVcy50c3g=": {
+      "title": "deco-sites/project-test/sections/about-us/AboutUs.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcm9qZWN0LXRlc3Qvc2VjdGlvbnMvYWJvdXQtdXMvQWJvdXRVcy50c3g=@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/project-test/sections/about-us/AboutUs.tsx"
+          ],
+          "default": "deco-sites/project-test/sections/about-us/AboutUs.tsx"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy9wcm9qZWN0LXRlc3Qvc2VjdGlvbnMvYmFubmVyLWluZm8vQmFubmVySW5mby50c3g=": {
       "title": "deco-sites/project-test/sections/banner-info/BannerInfo.tsx",
       "type": "object",
@@ -12646,6 +12707,9 @@
         },
         {
           "$ref": "#/definitions/JGxpdmUvc2VjdGlvbnMvVXNlU2xvdC50c3g="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcm9qZWN0LXRlc3Qvc2VjdGlvbnMvYWJvdXQtdXMvQWJvdXRVcy50c3g="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9wcm9qZWN0LXRlc3Qvc2VjdGlvbnMvYmFubmVyLWluZm8vQmFubmVySW5mby50c3g="
