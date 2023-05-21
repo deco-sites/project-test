@@ -67,7 +67,7 @@ function Modals({ menu, searchbar, cart }: Props) {
         }}
       >
         <Suspense fallback={<Loading />}>
-          <Cart {...cart}/>
+          <Cart {...cart} />
         </Suspense>
       </Modal>
     </>

@@ -70,7 +70,7 @@ function Header(
     navItems = [],
     navItemsSecondary = [],
     suggestions,
-    cart
+    cart,
   }: Props,
 ) {
   const searchbar = { ..._searchbar, products, suggestions };
