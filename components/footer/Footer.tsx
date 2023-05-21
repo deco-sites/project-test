@@ -25,7 +25,7 @@ function FooterContainer(
   },
 ) {
   return (
-    <div class={`py-6 px-4 border-t-transparent sm:py-12 sm:px-0 ${_class}`}>
+    <div class={` border-none sm:px-0 ${_class}`}>
       {children}
     </div>
   );
@@ -55,14 +55,14 @@ function Footer(
   return (
     <footer class="w-full bg-black flex flex-col divide-y divide-primary-content lg:bg-white">
       <div>
-        <div class="container w-full flex flex-col divide-y divide-primary-content">
+        <div class=" w-full flex flex-col divide-y divide-primary-content">
           <FooterContainer>
             <Newsletter />
           </FooterContainer>
 
           <FooterContainer>
             {/* Desktop view */}
-            <ul class="hidden lg:flex flex-row gap-20 bg-white w-[80%] mx-auto">
+            <ul class="hidden lg:flex flex-row gap-20 bg-white w-[80%] mx-auto lg:justify-center lg:mt-6">
               {sectionsDesktop.map((section) => (
                 <li>
                   <span class="font-semibold text-lg text-black">
@@ -80,7 +80,7 @@ function Footer(
             </ul>
 
             {/* Mobile view */}
-            <ul class="w-[90%] mx-auto flex flex-row flex-wrap justify-center gap-[10%] lg:hidden ">
+            <ul class="w-[90%] mx-auto flex flex-row flex-wrap justify-center gap-[10%] lg:hidden pb-5">
               {sections2Mobile.map((section) => (
                 <li class="w-[45%] h-[40px] mt-4 flex justify-center items-center">
                   <a

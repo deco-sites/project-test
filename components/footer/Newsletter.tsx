@@ -1,7 +1,7 @@
 function Newsletter() {
   return (
     <div
-      class="flex flex-col w-full xl:flex-row items-center gap-6 xl:gap-20 h-full py-5"
+      class="flex flex-col w-full xl:flex-row items-center gap-6 xl:gap-20 h-full py-8 justify-center"
       style={{ background: "#ede734" }}
     >
       <div class="flex flex-col gap-2 max-w-[300px] sm:max-w-[500px] xl:max-w-[100%] ">
