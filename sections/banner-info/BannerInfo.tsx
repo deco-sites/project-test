@@ -82,6 +82,7 @@ export default function BannnerInfo({
           loading={`${isLCP ? "eager" : "lazy"}`}
           decoding={`${isLCP ? "sync" : "async"}`}
           fetchPriority={`${isLCP ? "high" : "low"}`}
+          class="h-[482px] md:h-[569px]"
         />
       </Picture>
       <div
