@@ -8090,9 +8090,22 @@
             ]
           },
           "title": "Sections Desktop"
+        },
+        "label": {
+          "type": "string",
+          "title": "Conteúdo Newsletter",
+          "default": "ENTRE PARA O ADICLUB E GANHE 500 PONTOS RESGATÁVEIS"
+        },
+        "textButton": {
+          "type": "string",
+          "default": "CADASTRE-SE GRATUITAMENTE",
+          "title": "Text Button"
         }
       },
-      "required": [],
+      "required": [
+        "label",
+        "textButton"
+      ],
       "title": "deco-sites/project-test/components/footer/Footer.tsx@Props"
     },
     "ZGVjby1zaXRlcy9wcm9qZWN0LXRlc3QvY29tcG9uZW50cy9zZWFyY2gvU2VhcmNoYmFyLnRzeA==@EditableProps": {
